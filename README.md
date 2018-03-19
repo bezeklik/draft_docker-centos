@@ -1,3 +1,19 @@
+# Supported tags and respective `Dockerfile` links
+- `lastest`, `5.11`, `5` [(*Dockerfile*)](https://github.com/bezeklik/test2/blob/master/Dockerfile)
+- `php53` [(*Dockerfile*)](https://github.com/bezeklik/test2/blob/php53/Dockerfile)
+
+# Quick reference
+
+# How to use this image
+## Usage
+```
+docker run --interactive --tty --name centos5 bezeklik/centos5 bash
+```
+
+# License
+
+
+
 Alt-H1
 ======
 
