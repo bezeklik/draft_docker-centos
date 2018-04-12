@@ -1,8 +1,8 @@
 # Supported tags and respective `Dockerfile` links
 
-- `lastest`, `7.4`, `7` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/master/Dockerfile)
-- `6.9`, `6` [(*Dockerfile*)]()
-- `5.11`, `5` [(*Dockerfile*)]()
+- `7.4`, `7`, `lastest` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/master/7/Dockerfile)
+- `6.9`, `6` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/master/6/Dockerfile)
+- `5.11`, `5` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/master/5/Dockerfile)
 
 # Quick reference
 
