@@ -1,16 +1,8 @@
 # Supported tags and respective `Dockerfile` links
 
 - `lastest`, `7.4`, `7` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/master/Dockerfile)
-- `7.4-php`, `7.4-php72`, `7-php`, `7-php72` [(*Dockerfile*)]()
-- `7.4-php71`, `7-php71` [(*Dockerfile*)]()
-- `7.4-php70`, `7-php70` [(*Dockerfile*)]()
-- `7.4-php56`, `7-php56` [(*Dockerfile*)]()
-- `7.4-php-base`, `7-php-base` [(*Dockerfile*)]()
 - `6.9`, `6` [(*Dockerfile*)]()
-- `6.9-php`, `6-php` [(*Dockerfile*)]()
 - `5.11`, `5` [(*Dockerfile*)]()
-- `5.11-php`, `5-php` [(*Dockerfile*)]()
-- `5.11-php53`, `5-php53` [(*Dockerfile*)](https://github.com/bezeklik/docker-centos/blob/php53/Dockerfile)
 
 # Quick reference
 
@@ -34,7 +26,13 @@ https://github.com/bezeklik/docker-centos/issues
 
 - **Supported Docker versions:**
 
-# What is CentOS?
+# Difference from the official image
+
+- Delete unnecessary packages for Docker
+
+- 2017/3/31 に EOL を迎え、ミラーサーバーから yum リポジトリが削除された CentOS 5.11 で yum を使えるようにしている。
+
+- CentOS Linux 5 has reached End of Life, as of 31 March 2017.
 
 # How to use this image
 
