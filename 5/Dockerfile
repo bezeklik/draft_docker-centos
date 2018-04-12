@@ -5,8 +5,12 @@ FROM centos:5
 
 LABEL maintainer "Bezeklik"
 
-RUN sed -i -e '/mirrorlist=h/d' -e '/#baseurl/ s/^#//' -e 's/$releasever/5.11/' -e 's|mirror.centos.org/centos|vault.centos.org|' /etc/yum.repos.d/CentOS-Base.repo && \
-    sed -i -e '/mirrorlist=h/d' -e '/#baseurl/ s/^#//' -e 's/$releasever/5.11/' -e 's|mirror.centos.org/centos|vault.centos.org|' /etc/yum.repos.d/CentOS-fasttrack.repo && \
-    sed -i -e '/mirrorlist=h/d' -e '/#baseurl/ s/^#//' -e 's/$releasever/5.11/' -e 's|mirror.centos.org/centos|vault.centos.org|' /etc/yum.repos.d/libselinux.repo
+RUN sed -i /etc/yum.repos.d/{CentOS-{Base,fasttrack},libselinux}.repo \
+        -e '/^mirrorlist/d' \
+        -e '/#baseurl/ s/^#//' \
+        -e 's/$releasever/5.11/' \
+        -e 's|mirror.centos.org/centos|vault.centos.org|' && \
+    yum -y --quiet update && \
+    rm -rf /var/cache/yum
 
 CMD ["/bin/bash"]
